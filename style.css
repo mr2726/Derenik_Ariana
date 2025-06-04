@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Waterfall&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Waterfall', sans-serif;
+    background-color: #FFF6EE;
+    color: #333;
+    overflow: hidden !important;
+}
+
+.wrapper {
+    max-width: 1200px;
+    height: 100vh !important;
+    overflow: hidden;
+    height: auto;
+}
+header{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 100px
+}
+header p {
+    margin-top: 20px;
+    position: absolute;
+    font-family: 'Waterfall', sans-serif;
+    color: #990000;
+    font-size: 64px;
+    width: 130%;
+    transform: rotate(7.14deg);
+}
+
+header p:nth-child(1){
+    left: 0;
+    top: 0;
+}
+
+header p:nth-child(2){
+    top: 75px;
+    left: -100px;
+}
+
+header p:nth-child(3){
+    top: 160px;
+    left: 0;
+}
+
+h3{
+    margin-top: 150px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.first-image{
+    width: 242px;
+    height: 275px;
+    background-image: url('https://placehold.co/242x275');
+    z-index: 888888;
+    position: relative;
+    margin: 0 auto;
+    top: 75px;
+    transform: rotate(7.12deg);
+}
