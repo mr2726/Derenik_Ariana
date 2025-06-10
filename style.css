@@ -1,74 +1,292 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Waterfall&display=swap');
 
-* {
+@font-face {
+    font-family: 'arm_num';
+    src: url('./assets/font/arm_num.ttf') format('truetype');
+    /* font-weight: ;  */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arm_text';
+    src: url('./assets/font/arm_text.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    width: 400px;
-    height: auto;
-    margin: 0 auto;
-    font-family: 'Waterfall', sans-serif;
-    background-color: #FFF6EE;
-    color: #333;
-    overflow: hidden !important;
+body{
+    font-family: 'Italianno', cursive;
+    background: #FFFAF5;
+    font-size: 10px;;
 }
 
-.wrapper {
-    max-width: 1200px;
-    height: 100vh !important;
-    overflow: hidden;
-    height: auto;
-}
-header{
+.header{
+    position: relative;
     width: 100%;
+    height: 100vh;
     overflow: hidden;
-    position: relative;
-    top: 100px
 }
-header p {
-    margin-top: 20px;
+
+.header__bg{
+    width: 300%;
     position: absolute;
-    font-family: 'Waterfall', sans-serif;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.header__bg--text{
     color: #990000;
-    font-size: 64px;
-    width: 130%;
+    font-family: 'Waterfall', cursive;
+    font-size: 9.6em;
     transform: rotate(7.14deg);
+    margin-top: 20px;
+    z-index: 1;
 }
 
-header p:nth-child(1){
-    left: 0;
-    top: 0;
+.header__bg--text:nth-child(1),.header__bg--text:nth-child(3){
+    margin-left: -20px;
 }
 
-header p:nth-child(2){
-    top: 75px;
-    left: -100px;
+.header__bg--text:nth-child(2){
+    margin-left: -200px;
 }
 
-header p:nth-child(3){
-    top: 160px;
-    left: 0;
-}
-
-h3{
-    margin-top: 150px;
-    text-align: center;
-    font-size: 40px;
-    font-family: "Italianno", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.first-image{
+.header__img{
+    position: absolute;
     width: 242px;
-    height: 275px;
-    background-image: url('https://placehold.co/242x275');
-    z-index: 888888;
-    position: relative;
+    height: 290px;
+    background: url("https://placehold.co/242x290");
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(7.14deg);
+    margin-top: 10px;
+}
+
+.welcome{
+    width: 360px;
     margin: 0 auto;
-    top: 75px;
-    transform: rotate(7.12deg);
+    margin-bottom: 2em;
+}
+
+.welcome--text{
+    font-family: "arm_text", cursive;
+    text-align: center;
+    font-size: 2.4em;
+}
+
+.date{
+    font-family: "arm_text", cursive;
+    font-size: 6.4em;
+    text-align: center;
+    margin: 25px 0;
+    font-weight: 100;
+}
+
+.date__box--topline{
+    width: 100%;
+    height: 5px;
+    background: black;
+    margin-bottom: 10px;
+}
+.date__friday{
+    padding-bottom: 10px;
+    margin-top: 20px;
+    border-top: 5px solid black;
+    font-size: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 0 20px;
+}
+
+.cell:nth-child(1){
+    border-right: 5px solid black;
+    padding-right: 45px;
+}
+
+.cell:nth-child(2){
+    position: relative;
+}
+
+.cell:nth-child(3){
+    padding-left: 45px;
+    border-left: 5px solid black;
+}
+
+.range{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 180px;
+    background: url('./assets/img/range.png') no-repeat center center / cover;
+    margin-top: -20px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.img__line1{
+    width: 100%;
+    height: 110px;
+    background: url('./assets/img/line1.png') no-repeat center center / cover;
+    z-index: 1000;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.img__img{
+    width: 242px;
+    height: 320px;
+    background: url('https://placehold.co/242x320');
+    margin: 0 auto;
+    z-index: 1;;
+}
+
+
+.img__line2{
+    width: 100%;
+    height: 129px;
+    background: url('./assets/img/line2.png') no-repeat center center / cover;
+    z-index: 1000;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.day{
+    margin-top: 50px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.day--title{
+    font-family: "arm_text";
+    font-size: 4.8em;
+    text-align: center;
+}
+
+.dey__first--plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day__first--plan__img{
+    background: url('./assets/img/img1.png') no-repeat center center / cover;
+    width: 150px;
+    height: 150px;
+}
+
+.day__first--plan__contnt--time{
+    font-family: "arm_num", sans-serif;
+    font-size: 6.4em;
+    color: #620000;
+    margin-left: 20px;
+}
+
+.day__first--plan__content--text{
+    width: 173px;
+    font-family: "arm_text";
+    font-size: 3.2em;
+    color: black;
+}
+
+.btn{
+    font-family: "arm_text", cursive;
+    font-size: 2em;
+    padding: 5px 15px;
+    background-color: none;
+    border: none;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #620000;
+    border-radius: 13px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 3px 1.9px 0px #7C6C5C;
+    text-decoration: none;
+    color: black;
+}
+
+.day__second{
+    margin-top: 50px;
+}
+
+.day__second--plan__img{
+    background: url('./assets/img/img2.png') no-repeat center center / cover;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.img__line1--day{
+    width: 100%;
+    height: 110px;
+    background: url('./assets/img/line1.png') no-repeat center center / cover;
+    z-index: 1000;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.footer{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__text{
+    width: 245px;
+    font-family: 'arm_text', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+}
+
+.footer__input{
+    width: 245px;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+    font-family: 'arm_text', cursive;
+    font-size: 1.6em;
+    margin: 20px auto;
+    outline: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+}
+
+.footer__btn{
+    width: 245px;
+    height: 40px;
+    border: none;
+    font-family: 'arm_text', cursive;
+    font-size: 1.6em;
+    margin: 20px auto;
+    outline: none;
+    background-color: #620000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }
