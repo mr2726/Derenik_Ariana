@@ -10,7 +10,7 @@ passBtn.addEventListener('click', () => {
 const sendBTN = document.getElementById('send');
 sendBTN.addEventListener('click', () => {
     const token = '7572678936:AAFVDE7hZGMq3AI4LFV71gIfPYtAPzvWIu0';
-    const chatId = '5692567498';
+    const chatId = '-1002776151063';
     const messageInput = document.getElementById('name');
     const message = messageInput.value + " YES!";
 
