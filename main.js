@@ -27,4 +27,6 @@ sendBTN.addEventListener('click', () => {
     .then(response => response.json())
     .then(data => console.log('Message sent:', data))
     .catch(error => console.error('Error:', error));
+    messageInput.value = ''; // Clear the input field after sending
+    alert('Message sent successfully!');
 });
